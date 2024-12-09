@@ -7,7 +7,7 @@ replicaCount: 3
 
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
-  repository: minabf/mern-server
+  repository: minabf/mern-app-server
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
@@ -57,7 +57,7 @@ service:
   port: 5000
 env :
   - name : MONGO_URI
-    value : mongo-service://mongodb:27017/mern-app
+    value : mongodb://mongodb:27017/mern-app
   - name : PORT
     value : "5000"
 
