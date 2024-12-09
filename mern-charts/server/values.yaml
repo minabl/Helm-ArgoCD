@@ -55,6 +55,11 @@ service:
   type: ClusterIP
   # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
   port: 5000
+env :
+  - name : MONGO_URI
+    value : mongodb://mongodb:27017/mern-app
+  - name : PORT
+    value : "5000"
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
