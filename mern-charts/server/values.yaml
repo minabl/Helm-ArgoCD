@@ -57,7 +57,7 @@ service:
   port: 5000
 env :
   - name : MONGO_URI
-    value : mongodb://mern-app-mongo-mongodb/employees
+    value : mongodb://mongodb:27017/mern-app
   - name : PORT
     value : "5000"
 
